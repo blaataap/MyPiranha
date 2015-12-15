@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<form method="post" action="@Href("~/account/login")">
+    <input type="hidden" name="returnurl" value="@Href("~/home/mypage")" />
+    <input type="hidden" name="failureurl" value="@Href("~/home/mypage?msg=err")" />
+
+    <label>Username:</label><input type="text" name="login" />
+    <label>Password:</label><input type="password" name="password" />
+
+    <button type="submit">Login</button>
+</form>
